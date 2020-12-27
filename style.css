@@ -25,6 +25,8 @@ body > * {
   transition: 0.1s filter linear;
 }
 
+/* Personalization sweet alert */
+
 .swal2-html-container {
   font-size: 68px;
 }
@@ -61,6 +63,9 @@ body > * {
   border: none !important;
   box-shadow: none !important;
 }
+
+/* Start Personalization of section game and sub */
+
 
 #game {
   background-image: url("img/blue-monster.jpg");

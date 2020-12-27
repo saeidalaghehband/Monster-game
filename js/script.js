@@ -1,5 +1,5 @@
 
-//Define variable
+//Define variables
 
 let humanDiv = document.getElementById("humanDiv");
 let monsterDiv = document.getElementById("monsterDiv");
