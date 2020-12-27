@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Creepster", sans-serif;
+  text-transform: uppercase;
+}
+
+body {
+  height: 100%;
+}
+
+p {
+  font-size: 26px;
+  color: #fff;
+}
+
+body.swal2-shown > [aria-hidden="true"] {
+  filter: blur(5px);
+}
+
+body > * {
+  transition: 0.1s filter linear;
+}
+
+.swal2-html-container {
+  font-size: 68px;
+}
+
+.swal2-styled.swal2-confirm {
+  border: none;
+  border-radius: 0.25em;
+  background: initial;
+  background-color: #776d8a !important;
+  color: #fff;
+  font-size: 2em;
+  padding: 15px 40px;
+}
+.swal2-styled.swal2-confirm:active,
+.swal2-styled.swal2-confirm:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.swal2-cancel.swal2-styled {
+  border: none;
+  border-radius: 0.25em;
+  background: initial;
+  background-color: #757575;
+  color: #fff;
+  font-size: 2em;
+  padding: 15px 40px;
+}
+
+.swal2-cancel .swal2-styled:active,
+.swal2-cancel .swal2-styled:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#game {
+  background-image: url("img/blue-monster.jpg");
+  background-position: center top;
+  height: 100vh;
+  padding-top: 40px;
+}
+
+#human {
+  width: 49%;
+  height: 200px;
+  text-align: center;
+  float: left;
+  margin-bottom: 50px;
+  font-family: "Creepster", cursive;
+}
+
+#human h1 {
+  font-size: 48px;
+  padding-bottom: 50px;
+}
+
+#human .progressHumanBar {
+  border: 1px solid #000;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #54e346;
+  margin: 0 auto;
+  
+}
+
+#monster {
+  float: right;
+  width: 49%;
+  height: 200px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: "Creepster", cursive;
+}
+
+#monster h1 {
+  font-size: 48px;
+  padding-bottom: 50px;
+}
+
+#monster .progressMonsterBar {
+  border: 1px solid #000;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #54e346;
+  margin: 0 auto;
+}
+
+#btn {
+  clear: both;
+  text-align: center;
+}
+
+#btn .attack {
+  width: 120px;
+  height: 60px;
+  font-size: 26px;
+  border-radius: 5px;
+  background-color: #b088f9;
+  cursor: pointer;
+  border: none;
+  margin: 0 40px;
+  font-family: "Creepster", cursive;
+}
+
+#btn .attack:hover,
+.attack:focus {
+  background-color: #da9ff9;
+  outline: none;
+  border: none;
+}
+
+#btn .giveup {
+  width: 120px;
+  height: 60px;
+  font-size: 26px;
+  border-radius: 5px;
+  background-color: #e8e8e8;
+  cursor: pointer;
+  border: none;
+  font-family: "Creepster", cursive;
+}
+
+#btn .giveup:hover,
+.giveup:focus {
+  background-color: #f4f4f4;
+  outline: none;
+  border: none;
+}
+
+#btn .heal {
+  width: 120px;
+  height: 60px;
+  font-size: 26px;
+  border-radius: 5px;
+  background-color: #28df99;
+  cursor: pointer;
+  border: none;
+  font-family: "Creepster", cursive;
+}
+
+#btn .heal:hover,
+.heal:focus {
+  background-color: #99f3bd;
+  outline: none;
+  border: none;
+}
+
+#btn .heal:disabled {
+  cursor: default;
+  background-color: #28df99;
+}
+
+.progress {
+  width: 450px;
+  height: 31px;
+  background: #1a1c20;
+  border-radius: 20px;
+  border: 1px solid #000;
+  box-shadow: 0 2px 2px #4f4c4c;
+  overflow: visible;
+  position: relative;
+  outline-width: 50px;
+}
+
+.progress .progressHumanBar,
+.progress .progressMonsterBar {
+  border-radius: 20px;
+  border: 1px solid #000;
+}
+
+.animate {
+  animation: animate-positive 2s;
+}
+
+
+@keyframes animate-positive {
+  0% {
+    width: 0;
+  }
+}
