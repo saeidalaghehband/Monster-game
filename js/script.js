@@ -1,4 +1,3 @@
-
 //Define variables
 
 let humanDiv = document.getElementById("humanDiv");
@@ -29,23 +28,26 @@ btnHeal.disabled = true;
 
 function attBtn() {
   btnHeal.disabled = false;
-  let soundBtn = new Audio('sounds/soundbtnheal.mp3')
+  let soundBtn = new Audio("sounds/soundbtnheal.mp3");
   soundBtn.play();
 
   let numRandomhuman = Math.floor(Math.random() * 17) + 1;
   let numRandomMonster = Math.floor(Math.random() * 18) + 1;
   humanDiv.style.width = parseInt(humanDiv.style.width) - numRandomhuman + "px";
-  monsterDiv.style.width =parseInt(monsterDiv.style.width) - numRandomMonster + "px";
+  monsterDiv.style.width =
+    parseInt(monsterDiv.style.width) - numRandomMonster + "px";
   innerHuman.innerText = parseInt(humanDiv.style.width, 10);
   innerMonster.innerText = parseInt(monsterDiv.style.width, 10);
 
   if (parseInt(monsterDiv.style.width) < 25) {
     this.numRandomMonster = Math.floor(Math.random() * 3) + 1;
-    monsterDiv.style.width =parseInt(monsterDiv.style.width) - numRandomMonster + "px";
+    monsterDiv.style.width =
+      parseInt(monsterDiv.style.width) - numRandomMonster + "px";
   }
   if (parseInt(humanDiv.style.width) < 25) {
     this.numRandomhuman = Math.floor(Math.random() * 3) + 1;
-    humanDiv.style.width = parseInt(humanDiv.style.width) - numRandomhuman + "px";
+    humanDiv.style.width =
+      parseInt(humanDiv.style.width) - numRandomhuman + "px";
   }
 
   if (parseInt(monsterDiv.style.width) <= 0) {
@@ -70,7 +72,7 @@ function attBtn() {
     btnHeal.disabled = true;
     btnAtt.disabled = true;
     btnGiv.disabled = true;
-    
+
     setTimeout(() => {
       monsterDiv.style.width = "450px";
       humanDiv.style.width = "450px";
@@ -89,7 +91,6 @@ function attBtn() {
     }, 5500);
     monsterDiv.classList.remove("animate");
     humanDiv.classList.remove("animate");
-
   } else if (humanDiv.style.width <= "0px") {
     Swal.fire({
       position: "top",
@@ -135,7 +136,7 @@ function attBtn() {
 //Start health button
 
 function healBtn() {
-  let soundBtn = new Audio('sounds/soundbtnheal.mp3')
+  let soundBtn = new Audio("sounds/soundbtnheal.mp3");
   soundBtn.play();
 
   let numRandomHuman = Math.floor(Math.random() * 10) + 1;
@@ -166,8 +167,7 @@ function healBtn() {
 //Start give up button
 
 function giveupBtn() {
-
-  let soundBtn = new Audio('sounds/soundbtngiveup.mp3')
+  let soundBtn = new Audio("sounds/soundbtngiveup.mp3");
   soundBtn.play();
 
   Swal.fire({
@@ -208,7 +208,6 @@ function giveupBtn() {
       }, 3500);
       monsterDiv.classList.remove("animate");
       humanDiv.classList.remove("animate");
-      
     } else {
       soundBtn.play();
     }
